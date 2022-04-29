@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+
+*, html, body{
+  margin: 0;
+  padding: 0;
+}
+
+p, h1,h2,h3{
+  font-family: poppins;
+  color:rgb(33, 35, 37)
+}
+
+body{
+  max-width: 100vw;
+  padding: 0 0.5rem 0;
+  background-color: whitesmoke;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.shortcuts{
+  display: flex;
+  width: calc(100% - 1rem);
+  position: fixed;
+  justify-content: space-between;
+}
+
+.shortcuts i{
+  font-size: 2.5rem;
+  color:rgb(25, 27, 29, 0.6)
+}
+
+main{
+  margin-top: 7.5%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1rem 0;
+  gap:2.5rem;
+}
+
+main h1{
+  margin-bottom: 1rem;
+}
+
+main div{
+  display: flex;
+  align-items: center;
+  text-indent: 0.85rem;
+  margin-left:1rem;
+}
+
+.location{
+  gap: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  display: none;
+}
+
+.location *{
+  margin-left: 1rem;
+}
+
+.logout{
+  margin-top: 2rem;
+}
+
+.logout h2{
+  color: red;
+}
+
+.credits{
+  position: absolute;
+  top: 100%;
+  transform: translateY(-102%);
+  color:rgb(33, 35, 37, 0.2)
+}
