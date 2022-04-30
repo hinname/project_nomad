@@ -10,18 +10,17 @@
   <body>
     <header>
       <div class="shortcuts">
-        <i class="fa-solid fa-house"></i>
-        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-house" id="homeIcon" onclick="goHome()"></i>
+        <i class="fa-solid fa-star" id="favsIcon" onclick="goFavs()"></i>
       </div>
     </header>
 
     <main>
       <h1>Configurações</h1>
 
-      <div class="darkMode">
-        <i class="fa-solid fa-circle-half-stroke"></i>
-        <h2>Modo Dark</h2>
-        <div id="darkModeSwitch"></div>
+      <div class="account">
+        <i class="fa-solid fa-user"></i>
+        <h2>Conta</h2>
       </div>
 
       <div class="locationTitle">
@@ -47,6 +46,12 @@
         </div>
       </div>
 
+      <div class="darkMode">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+        <h2>Modo Dark</h2>
+        <div id="darkModeSwitch"></div>
+      </div>
+
       <div class="privacy">
         <i class="fa-solid fa-mask"></i>
         <h2>Privacidade</h2>
@@ -57,7 +62,8 @@
         <h2>Notificações</h2>
       </div>
 
-      <div class="logout">
+      <div class="logout" onclick="dropLocationOptions()">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
         <h2>Sair</h2>
       </div>
     </main>

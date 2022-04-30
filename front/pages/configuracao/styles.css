@@ -17,27 +17,34 @@ body{
   background-color: whitesmoke;
 }
 
-header{
+header {
+  background: #FFFFFF;
+  position: fixed;
+  width: 100vw;
+  height: 59px;
+  left: 0px;
+  top: 0px;
+  font-size: 36px;
+  color: rgba(25, 27, 29, 0.719);
+  box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.123);
+  align-items: center ;
   display: flex;
-  align-items: center;
-  height: 8vh;
-  width: 100%;
 }
 
 .shortcuts{
+  padding: 0 8px 0;
   display: flex;
-  width: calc(100% - 1rem);
-  position: fixed;
   justify-content: space-between;
+  width: 100%;
 }
 
 .shortcuts i{
-  font-size: 2.5rem;
-  color:rgb(25, 27, 29, 0.6)
+  font-size: 2rem;
+  color:rgba(25, 27, 29, 0.719)
 }
 
 main{
-  margin-top: 7.5%;
+  margin-top: 59px;
   display: flex;
   flex-direction: column;
   padding: 1.25rem 1rem 0;
@@ -59,7 +66,6 @@ main div{
   gap: 0.75rem;
   flex-direction: column;
   align-items: flex-start;
-  display: none;
 }
 
 .location *{
@@ -67,10 +73,10 @@ main div{
 }
 
 .logout{
-  margin-top: 2rem;
+  margin: 2rem 0 2rem;
 }
 
-.logout h2{
+.logout *{
   color: red;
 }
 
@@ -78,5 +84,6 @@ main div{
   position: absolute;
   top: 100%;
   transform: translateY(-102%);
-  color:rgb(33, 35, 37, 0.2)
+  color:rgb(33, 35, 37, 0.2);
+  display:none
 }
