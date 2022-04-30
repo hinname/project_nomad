@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Favoritos | Nomad</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="atalhos">
-            <i class="fa-solid fa-gear" id="settings"></i>
-            <i class="fa-solid fa-house" id="home"></i>
-        </div>
+      <div class="atalhos">
+        <i class="fa-solid fa-gear" id="settings" onclick="goSettings()"></i>
+        <i class="fa-solid fa-house" id="home" onclick="goHome()"></i>
+      </div>
     </header>
 
     <main>
-            <div id="favorito1" class="favs">
-                <div class="part-esq">
-                    <i class="fa-solid fa-plane"></i>
-                    <div id="viagem1" class="descricao-viagem">
-                        <p>Casa Blanca - Marrocos</p>
-                        <p class="pack">4 dias - Hotel, Passeio</p>
-                    </div>
-                </div>
-                <div class="part-dir">
-                    <p class="preco">R$1.122</p>
-                </div>
-            </div>
+      <div id="favorito1" class="favs">
+        <div class="part-esq">
+          <i class="fa-solid fa-plane"></i>
+          <div id="viagem1" class="descricao-viagem">
+            <p>Casa Blanca - Marrocos</p>
+            <p class="pack">4 dias - Hotel, Passeio</p>
+          </div>
+        </div>
+        <div class="part-dir">
+          <p class="preco">R$1.122</p>
+        </div>
+      </div>
 
-            <div id="favorito2" class="favs">
-                <div class="part-esq">
-                    <i class="fa-solid fa-plane"></i>
-                    <div id="viagem2" class="descricao-viagem">
-                        <p>Cancún, México</p>
-                        <p class="pack">3 dias - Hotel, Almoço e Janta</p>
-                    </div>
-                </div>
-                <div class="part-dir">
-                    <p class="preco">R$1.002</p>
-                </div>
-            </div>
+      <div id="favorito2" class="favs">
+        <div class="part-esq">
+          <i class="fa-solid fa-plane"></i>
+          <div id="viagem2" class="descricao-viagem">
+            <p>Cancún, México</p>
+            <p class="pack">3 dias - Hotel, Almoço e Janta</p>
+          </div>
+        </div>
+        <div class="part-dir">
+          <p class="preco">R$1.002</p>
+        </div>
+      </div>
 
-            <div id="favorito3" class="favs">
-                <div class="part-esq">
-                    <i class="fa-solid fa-plane"></i>
-                    <div id="viagem3" class="descricao-viagem">
-                        <p>Fortaleza - Ceará</p>
-                        <p class="pack">6 dias - Pousada, 3 Refeições, Passeio</p>
-                    </div>
-                </div>
-                <div class="part-dir">
-                    <p class="preco">R$892</p>
-                </div>
-            </div>
-
+      <div id="favorito3" class="favs">
+        <div class="part-esq">
+          <i class="fa-solid fa-plane"></i>
+          <div id="viagem3" class="descricao-viagem">
+            <p>Fortaleza - Ceará</p>
+            <p class="pack">6 dias - Pousada, 3 Refeições, Passeio</p>
+          </div>
+        </div>
+        <div class="part-dir">
+          <p class="preco">R$892</p>
+        </div>
+      </div>
     </main>
-</body>
-    <script
-        src="https://kit.fontawesome.com/3db3686a09.js"
-        crossorigin="anonymous"
-    ></script>
-
+  </body>
+  <script
+    src="https://kit.fontawesome.com/3db3686a09.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./script.js"></script>
 </html>

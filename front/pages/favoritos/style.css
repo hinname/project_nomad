@@ -115,6 +115,11 @@ header {
     
 }
 
+.favs {
+    font-size: 18px;
+
+}
+
 i {
     font-size: 32px;
 }
@@ -134,8 +139,8 @@ i {
 
 .pack {
     color: rgba(0, 0, 0, 0.671);
-    font-size: 12px;
-    
+    font-size: 13.5px;
+    font-weight: 900;
 }
 
 .part-esq {
