@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+
+*, html, body{
+      margin: 0;
+      padding: 0;
+}
+
+p, h1,h2,h3{
+      font-family: poppins;
+      color:rgb(33, 35, 37)
+}
+
+body{
+      max-width: 100vw;
+      padding: 0 0.5rem 0;
+      background-color: rgb(255, 255, 255);
+}
+
+header {
+      background: #FFFFFF;
+      position: fixed;
+      width: 100vw;
+      height: 59px;
+      left: 0px;
+      top: 0px;
+      font-size: 36px;
+      color: rgba(25, 27, 29, 0.719);
+      box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.123);
+      align-items: center ;
+      display: flex;
+}
+
+.selected {
+      border-radius: 24px;
+      background-color: #51B6FF;
+      height: 100%;
+}
+
+.shortcuts{
+      padding: 0 8px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+}
+
+.shortcuts i{
+      font-size: 2rem;
+      color:rgba(25, 27, 29, 0.719)
+}
+
+.center {
+      display: flex;
+      border: 1px solid;
+      border-radius: 24px;
+}
+
+.option {
+      padding: 0 1.5rem 0.2rem;
+}
+
+.shortcuts div i{
+      font-size: 1.5rem;
+}
+
+footer{
+      height: 80px;
+      background-color: whitesmoke;
+      position: fixed;
+      top: 100vh;
+      left:0;
+      transform: translateY(-100%);
+      width: 100vw;
+}
+
+.bottomShortcuts{
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 0.5rem 0;
+      align-items: center;
+}
+
+.bottomShortcuts > *{
+      font-size: 1.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.274);
+      border-radius: 100%;
+      width: 46px;
+      height: 46px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFFFFF;
+      box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.363);
+}
+
+
+
+.back{
+      color:rgb(219, 99, 0)
+}
+
+.xmark{
+      color: red;
+}
+
+.star{
+      color: rgb(255, 217, 0)
+}
+
+.money{
+      color: green
+}
+
+.info{
+      color: rgb(34, 33, 33)
+}
