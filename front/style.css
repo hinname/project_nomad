@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap%27');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+.background img {
+    height: 100vh; 
+    flex-shrink: 0;
+    min-width: 100%;
+    
+}
+
+.background{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+   
+    
+}
+.shadow{
+    width: 100%;
+    box-shadow: 0px 200px 8px 200px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    position: absolute;
+    top: 0;
+}
+
+.elementos_superiores{
+    position: absolute;
+    top: 75px;
+    color: #EDF7FF;
+    right: 15px;
+    font-size: 25px;
+    z-index: 11;
+    
+    
+}
+
+.elementos_inferiores{
+    position: absolute;
+    top: 80%;
+    color: #BAE2FF;
+    font-size: 24px;
+    text-align: right;
+}
+.btn{
+    text-align: center;
+}
+.btn button {
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    background: #51b7ffd2;
+    border: none;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.vantagens{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 20px;
+    padding: 20px;
+    width:calc(100vw - 40px);
+    position: relative;
+}
+.vantagens h1{
+    font-size: 20px;
+}
+.vantagens p{
+    font-size: 14px;
+}
+#vantagem3 {
+    position: relative;
+    left: 50%;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+}
+footer {
+    background-color: #83C8FA;
+    display: flex;
+    padding: 20px;
+    width: calc(100vw - 40px);
+    
+}
+.titulo_contatos h1{
+    font-size: 14px;
+}
+.titulo_contatos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.redes_sociais{
+    display: flex;
+    gap: 20px;
+}
+.redes_sociais i{
+    font-size: 25px;
+}
+.elementos_contatos {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 6px;
+
+}
+main {
+    background-color: #E5E5E5;
+}
