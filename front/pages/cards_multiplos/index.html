@@ -12,11 +12,15 @@
       <div class="shortcuts">
         <i class="fa-solid fa-house" id="homeIcon" onclick="goHome()"></i>
         <div class="center">
-          <div class="leftOption">
-            <i class="fa-solid fa-plane-departure"></i>
+          <div class="leftPart selected">
+            <div id="planeOption" class="option selected">
+              <i class="fa-solid fa-plane-departure"></i>
+            </div>
           </div>
-          <div class="rightOption">
-            <i class="fa-solid fa-map-location-dot"></i>
+          <div class="rightPart">
+            <div id="mapOption" class="option">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
           </div>
         </div>
 
@@ -24,26 +28,87 @@
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <div class="card" id="card1">
+        <div class="image">
+          <div class="shadow"></div>
+          <img src="./singapura.jpg" alt="singapure" />
+        </div>
 
-    <footer>
-      <div class="bottomShortcuts">
-        <div class="back">
-          <i class="fa-solid fa-rotate-left"></i>
-        </div>
-        <div class="xmark">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
-        <div class="star">
-          <i class="fa-solid fa-star"></i>
+        <div class="cardText">
+          <h3 class="cardTittle">Singapura</h3>
+          <div class="trip">
+            <h4>5D</h4>
+            <h5>-</h5>
+            <p>R$12,2K</p>
+          </div>
         </div>
         <div class="money">
           <i class="fa-solid fa-money-bill-wave"></i>
         </div>
-        <div class="info">
-          <i class="fa-solid fa-circle-info"></i>
+      </div>
+
+      <div class="card" id="card2">
+        <div class="image">
+          <div class="shadow"></div>
+          <img src="./kyoto.jpg" alt="kyoto" />
+        </div>
+
+        <div class="cardText">
+          <h3 class="cardTittle">Kyoto</h3>
+          <div class="trip">
+            <h4>7D</h4>
+            <h5>-</h5>
+            <p>R$7,8K</p>
+          </div>
+        </div>
+
+        <div class="money">
+          <i class="fa-solid fa-money-bill-wave"></i>
         </div>
       </div>
+
+      <div class="card" id="card3">
+        <div class="image">
+          <div class="shadow"></div>
+          <img src="./bali.jpeg" alt="Bali Temple place" />
+        </div>
+        <div class="cardText">
+          <h3 class="cardTittle">Bali</h3>
+          <div class="trip">
+            <h4>5D</h4>
+            <h5>-</h5>
+            <p>R$10K</p>
+          </div>
+        </div>
+        <div class="money">
+          <i class="fa-solid fa-money-bill-wave"></i>
+        </div>
+      </div>
+
+      <div class="card" id="card4">
+        <div class="image">
+          <div class="shadow"></div>
+          <img src="./bauneario.jpg" alt="bauneario camboriu praia" />
+        </div>
+
+        <div class="cardText">
+          <h3 class="cardTittle">Balneário Camboriú</h3>
+          <div class="trip">
+            <h4>12D</h4>
+            <h5>-</h5>
+            <p>R$1,8K</p>
+          </div>
+        </div>
+        <div class="money">
+          <i class="fa-solid fa-money-bill-wave"></i>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h3>6 Promos Restantes</h3>
+      <div class="moreBtn">Pegue Mais</div>
     </footer>
   </body>
   <script
