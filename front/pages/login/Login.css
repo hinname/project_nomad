@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+
+
+body { 
+    background-image: url(img/Nomads.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Login-Content {
+    width: 414px;
+    height: 896px;
+    background-color: #ffffff;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    display: block;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.Login-h1 {
+    width: 337px;
+    height: 81px;
+    margin-top: 73px;
+    margin-left: 91px;
+    font-family: 'Baloo Da 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 81px;
+    color: rgba(16, 13, 51, 0.9);
+    opacity: 0.9;
+    text-shadow: 20px 20px 20px 20px rgb(0, 0, 0);
+}
+
+.Login-Form-Content {
+    margin-top: 130px;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+}
+
+.Campo { 
+    margin-left: 50px;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+#User, #pass { 
+    width: 90%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.esqueceu {
+    margin-left: 64%;
+}
+
+.esqueceu > a { 
+    text-decoration: none;
+    color: black;
+}
+
+.entrar {
+    margin-left: 11%;
+    margin-top: 45px;
+}
+
+.Button-content {
+    height: 50px;
+    width: 90%;
+    border-radius: 30px 30px 30px 30px;
+    background-color: yellow;
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
+    font-family: 'Baloo Da 2';
+    font-size: 30px;
+    text-align: center;
+    color: #133844;
+    font-weight: bold;
+}
+
+.Redes { 
+    margin-top: 25%;
+    margin-left: 32%;
+   color: #000000ab;
+   margin-bottom: 120px;
+}
+
+.imgs {
+    margin-left: -20px;
+}
+
+.SemConta {
+    margin-left: 32%;
+}
+
+.SemConta > p { 
+    margin: 0%;
+}
+
+.SemConta > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    margin-left: 40px;
+}
+
+.SemConta > a:hover {
+    color: rgb(0, 0, 114);
+    text-decoration: underline;
+}
+
+
+
