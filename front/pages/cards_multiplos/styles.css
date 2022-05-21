@@ -118,6 +118,20 @@ main{
   background-color: rgb(5, 73, 73);
   border-radius: 20px;
   z-index: 10;
+  transition: ease-out;
+}
+
+.card.swiped{
+  opacity: 0;
+  transition-duration: 0.8s;
+
+}
+.card.swiped.left{
+left: -200px !important;
+}
+
+.card.swiped.right{
+  left: 200px !important;
 }
 
 .card .image {
