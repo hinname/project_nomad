@@ -2,8 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
-
-
 *, html, body{
   margin: 0;
   padding: 0;
@@ -104,9 +102,11 @@ main{
   height: calc(100vh - 80px - 59px - 2rem);
   top:59px;
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  grid-template-columns: repeat(2,1fr);
   gap:0.65rem;
   padding: 1rem 0.5rem 1rem;
+  overflow-x:hidden;
+
 }
 
 

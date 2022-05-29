@@ -1,20 +1,43 @@
-const card1 = document.getElementById('card1')
-image = card1.getElementsByClassName('image')[0]
+
+    let cards
+    let card
+    let images = document.getElementsByClassName('image')
+    let imgNum
+    let i = 0
+    let main = document.body.getElementsByTagName('main')[0]
+    
+// addCardFunctions()
+
+
+// function addCardFunctions(){
+//     cards = document.getElementsByClassName('card')
+//     for (card of cards){
+//         image = card.getElementsByClassName('image')[0]
+//         image.addEventListener("touchstart", touchPress(image))
+//         image.addEventListener("touchend", touchRelease(image))
+//     }
+// }
 
 function onDrag({movementX}){
-    let getStyle = window.getComputedStyle(card1);
+    let getStyle = window.getComputedStyle(card);
     let left = parseInt(getStyle.left);
     
-    card1.style.left = `${left + movementX}px`
+    card.style.left = `${left + movementX}px`
 }
 
 function onDragMobile(touch){
+    card = image.parentElement
+    checkNum(this)
     let touchLocation = touch.targetTouches[0]
-    let getStyle = window.getComputedStyle(card1);
-    let left = parseInt(getStyle.left);
-    let width = parseInt(getStyle.width);
-
-    card1.style.left = `${touchLocation.pageX - width/2}px`
+    let getCardStyle = window.getComputedStyle(card);
+    let left = parseInt(getCardStyle.left);
+    let cardWidth = parseInt(getCardStyle.width);
+    let bodyWidth = parseInt(window.getComputedStyle(document.body).width)
+    if (imgNum%2 == 0){
+        card.style.left = `${touchLocation.pageX - bodyWidth/1.3}px`
+    } else {
+        card.style.left = `${touchLocation.pageX - cardWidth/2}px`
+    }
 }
 
 function removeCard(){
@@ -22,10 +45,11 @@ function removeCard(){
     let cards = document.getElementsByClassName('card')
     for (i in cards){
         if (cards[i].classList[1] == 'swiped'){
-            cards[i].style.display = 'none'
+            cards[i].outerHTML = ''
+            keepGrid()
+            console.log('sasas')
         }
     }
-
 }
 //Holding mouse left button to swipe
 image.addEventListener("mousedown", ()=>{
@@ -33,36 +57,54 @@ image.addEventListener("mousedown", ()=>{
     image.addEventListener("mousemove", onDrag)
 })
 //Pressing the touchscreen to swipe
-image.addEventListener("touchstart", ()=>{
+function touchPress(cardImg){
+    image = cardImg
     image.classList.add("active");
     image.addEventListener("touchmove", onDragMobile)
-})
+    
+}
 //Releasing the mouse left button
 document.addEventListener("mouseup", ()=>{
     image.classList.remove("active")
     image.removeEventListener("mousemove", onDrag)
 })
 //Releasing the touchscreen
-image.addEventListener("touchend", ()=>{
-    let getStyle = window.getComputedStyle(card1);
+function touchRelease(){
+    let getStyle = window.getComputedStyle(card);
     let left = parseInt(getStyle.left);
 
-    image.classList.remove("active");
-    image.removeEventListener("touchmove", onDragMobile)
+    card.classList.remove("active");
+    card.removeEventListener("touchmove", onDragMobile)
 
     if (left >= 45){
-        card1.classList.add("swiped");
-        card1.classList.add("right");
-        card1.style.transitionDuration = '0.8s'
+        card.classList.add("swiped");
+        card.classList.add("right");
+        card.style.transitionDuration = '0.8s'
         setTimeout(removeCard,800)
     } else if (left <= -40){
-        card1.classList.add("swiped");
-        card1.classList.add("left");
-        card1.style.transitionDuration = '0.8s'
+        card.classList.add("swiped");
+        card.classList.add("left");
+        card.style.transitionDuration = '0.8s'
         setTimeout(removeCard,800)
     } else{
-        card1.style.transitionDuration = '0.1s'
-        card1.style.left = 0;
-        setTimeout(()=>{card1.style.transitionDuration='0s'},150)
+        card.style.transitionDuration = '0.1s'
+        card.style.left = 0;
+        setTimeout(()=>{card.style.transitionDuration='0s'},150)
     }
-})
+}
+
+function checkNum(img){
+    i = 0
+    for (i in images){
+        if (img==images[i]){
+            imgNum = parseInt(i)+1
+        }
+    }
+    return imgNum
+}
+
+function keepGrid(){
+    if (main.childElementCount < 3){
+       main.innerHTML += '<div></div>' 
+    }
+}
