@@ -34,7 +34,7 @@ function onDragMobile(touch){
     let cardWidth = parseInt(getCardStyle.width);
     let bodyWidth = parseInt(window.getComputedStyle(document.body).width)
     if (imgNum%2 == 0){
-        card.style.left = `${touchLocation.pageX - bodyWidth/1.3}px`
+        card.style.left = `${touchLocation.pageX - bodyWidth/1.4}px`
     } else {
         card.style.left = `${touchLocation.pageX - cardWidth/2}px`
     }
@@ -108,3 +108,8 @@ function keepGrid(){
        main.innerHTML += '<div></div>' 
     }
 }
+//Reajuste automático pro tamanho real da viewport height
+window.addEventListener('resize', () =>{
+    let vh = window.innerHeight *0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+})
