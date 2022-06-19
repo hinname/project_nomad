@@ -32,11 +32,12 @@ function onDragMobile(touch){
     let getCardStyle = window.getComputedStyle(card);
     let left = parseInt(getCardStyle.left);
     let cardWidth = parseInt(getCardStyle.width);
-    let bodyWidth = parseInt(window.getComputedStyle(document.body).width)
+    let bodyWidth = parseInt(window.getComputedStyle(document.body).width);
     if (imgNum%2 == 0){
         card.style.left = `${touchLocation.pageX - bodyWidth/1.4}px`
-    } else {
-        card.style.left = `${touchLocation.pageX - cardWidth/2}px`
+card.style. left = `${touchLocation.pageX - cardWidth/2}px`    }
+    if (parseInt(card.style.left) >= 50){
+        card.style.opacity = '0.78'
     }
 }
 
@@ -79,7 +80,7 @@ function touchRelease(){
     if (left >= 45){
         card.classList.add("swiped");
         card.classList.add("right");
-        card.style.transitionDuration = '0.8s'
+    card.style.transitionDuration = '0.8s'
         setTimeout(removeCard,800)
     } else if (left <= -40){
         card.classList.add("swiped");

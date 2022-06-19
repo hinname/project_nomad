@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@200&display=swap');
 
 :root {
@@ -14,7 +13,6 @@
 body {
     width: 100vw;
     height: 100vh;
-    background: url(./img/Nomads.svg);
 }
 
 .container {
@@ -24,14 +22,120 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: space-between;
-   
+    justify-content: space-between;  
+    align-items: center; 
+    background: url(./img/Nomads.svg);
+}
+
+.container * {
+    z-index: 15;
+}
+
+header {
+    font-family: var(--fonte-destaque);
+    color: white;
 }
 
 header h1 {
     padding-top: 30px;
+    font-size: 36px;
+    font-weight: bolder;
+    text-shadow: 2px 0px 0.3px rgba(0, 0, 0, 0.199);
 }
 
-header h4 {
-    padding-top: 70px;
+header p {
+    padding-top: 34px;
+}
+
+main {
+    width: 88%;
+    background-color: #ffffffb6;
+    border-radius: 6px;
+    height: 429px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs > * {
+    text-align: left;
+    padding-left: 18px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.inputs h4 {
+    padding-bottom:5px;
+}
+
+.email {
+    padding-top: 47px;  
+}
+
+.password {
+    padding-top: 10px;
+}
+
+.inputs input { 
+    padding: 10px;
+    width: 85%;
+    background-color: #c4c4c4ce;
+    border: none;
+    border-radius: 5px;
+}
+
+main a {
+    display: block;
+    text-decoration: none;
+    color:#232121a2;
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.social-media {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+}
+
+.social-media img{
+    height: 48px;
+}
+
+.button{
+    padding-top: 26px;
+}
+
+.button button {
+    padding: 20px 80px 20px;
+    border-radius: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    background-color: #2795DE;
+    border: 0;
+    box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.226);
+}
+
+.sign-in {
+    padding-bottom: 30px;
+}
+
+.sign-in a {
+    font-size: 21px;
+    font-weight: bolder;
+    font-family: var(--fonte-destaque);
+    text-decoration: none;
+    color: #e2f3ffda;
+}
+
+.shadow{
+    width: 100%;
+    box-shadow: 0px -300px 16px 600px rgba(0, 0, 0, 0.397);
+    z-index: 10;
+    position: absolute;
+    top: 100%;
 }
