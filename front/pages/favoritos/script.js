@@ -63,8 +63,5 @@ function onDragMobile(touch){
   let containerWidth = parseInt(window.getComputedStyle(container).width);
   let bodyWidth = parseInt(window.getComputedStyle(document.body).width);
   fav.style.left = `${touchLocation.pageX - containerWidth/2}px`
-  if (parseInt(fav.style.left) >= 50){
-      fav.style.opacity = '0.78'
-  }
   console.log(touchLocation.pageX)
 }

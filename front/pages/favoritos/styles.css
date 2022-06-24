@@ -62,11 +62,6 @@ main{
 }
 
 #favorito1 {
-    position: relative;
-    width: 100%;
-    height: 59px;
-    left: 0px;
-    background: #FFFFFF;
     color: rgba(0, 0, 255, 0.459);
 }
 
@@ -78,11 +73,6 @@ main{
 }
 
 #favorito2 {
-    position: relative;
-    width: 100%;
-    height: 59px;
-    left: 0px;
-    background: #FFFFFF;
     color: rgba(137, 43, 226, 0.432);
 }
 
@@ -92,15 +82,9 @@ main{
     height: 40px;
     left: 5px;
     top: 10px;
-
 }
 
 #favorito3 {
-    position: relative;
-    width: 100%;
-    height: 59px;
-    left: 0px;
-    background: #FFFFFF;
     color: rgba(192, 2, 40, 0.664);
 }
 
@@ -110,18 +94,27 @@ main{
     height: 44px;
     left: 4px;
     top: 8px;
+}
 
+.box{
+    height: 59px;
+    margin-top: 10px;
+    position: relative;
 }
 
 .fav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
     display: flex;
     align-items: center;
     box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.123);
     justify-content: space-between;
-    width: 100%;
     font-size: 18px;
     overflow: hidden;
-    margin-bottom: 8px;;
+    margin-bottom: 10px;
+    z-index: 10;
 }
 
 i {
@@ -154,3 +147,10 @@ i {
     padding-left: 8px;
 }
 
+.favBackground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    background-color: rgba(248, 15, 15, 0.973);
+}
