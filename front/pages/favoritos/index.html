@@ -5,57 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Favoritos | Nomad</title>
+    <title>Favoritos</title>
   </head>
   <body>
-    <header>
-      <div class="atalhos">
-        <i class="fa-solid fa-gear" id="settings" onclick="goSettings()"></i>
-        <i class="fa-solid fa-house" id="home" onclick="goHome()"></i>
-      </div>
-    </header>
-
-    <main>
-      <div id="favorito1" class="favs">
-        <div class="part-esq">
-          <i class="fa-solid fa-plane"></i>
-          <div id="viagem1" class="descricao-viagem">
-            <p>Casa Blanca - Marrocos</p>
-            <p class="pack">4 dias - Hotel, Passeio</p>
+    <div id="container">
+      <header>
+        <div class="atalhos">
+          <i class="fa-solid fa-gear" id="settings" onclick="goSettings()"></i>
+          <i class="fa-solid fa-house" id="home" onclick="goHome()"></i>
+        </div>
+      </header>
+  
+      <main>
+        <div id="favorito1" class="fav" ontouchstart="touchPress(this)" ontouchend="touchRelease(this)">
+          <div class="part-esq">
+            <i class="fa-solid fa-plane"></i>
+            <div id="viagem1" class="descricao-viagem">
+              <p>Casa Blanca - Marrocos</p>
+              <p class="pack">4 dias - Hotel, Passeio</p>
+            </div>
+          </div>
+          <div class="part-dir">
+            <p class="preco">R$1.132</p>
           </div>
         </div>
-        <div class="part-dir">
-          <p class="preco">R$1.132</p>
-        </div>
-      </div>
-
-      <div id="favorito2" class="favs">
-        <div class="part-esq">
-          <i class="fa-solid fa-plane"></i>
-          <div id="viagem2" class="descricao-viagem">
-            <p>Cancún, México</p>
-            <p class="pack">3 dias - Hotel, Almoço e Janta</p>
+  
+        <div id="favorito2" class="fav" ontouchstart="touchPress(this)" ontouchend="touchRelease(this)">
+          <div class="part-esq">
+            <i class="fa-solid fa-plane"></i>
+            <div id="viagem2" class="descricao-viagem">
+              <p>Cancún, México</p>
+              <p class="pack">3 dias - Hotel, Almoço e Janta</p>
+            </div>
+          </div>
+          <div class="part-dir">
+            <p class="preco">R$1.002</p>
           </div>
         </div>
-        <div class="part-dir">
-          <p class="preco">R$1.002</p>
-        </div>
-      </div>
-
-      <div id="favorito3" class="favs">
-        <div class="part-esq">
-          <i class="fa-solid fa-plane"></i>
-          <div id="viagem3" class="descricao-viagem">
-            <p>Fortaleza - Ceará</p>
-            <p class="pack">6 dias - Pousada, 3 Refeições, Passeio</p>
+  
+        <div id="favorito3" class="fav" ontouchstart="touchPress(this)" ontouchend="touchRelease(this)">
+          <div class="part-esq">
+            <i class="fa-solid fa-plane"></i>
+            <div id="viagem3" class="descricao-viagem">
+              <p>Fortaleza - Ceará</p>
+              <p class="pack">6 dias - Pousada, 3 Refeições, Passeio</p>
+            </div>
+          </div>
+          <div class="part-dir">
+            <p class="preco">R$892</p>
           </div>
         </div>
-        <div class="part-dir">
-          <p class="preco">R$892</p>
-        </div>
-      </div>
-    </main>
-  </body>
+      </main>
+    </body>
+    </div>
   <script
     src="https://kit.fontawesome.com/3db3686a09.js"
     crossorigin="anonymous"
