@@ -5,7 +5,7 @@ let container = document.getElementById('container')
 let main = document.body.getElementsByTagName('main')[0]
 
 function goHome() {
-  location.href = '../logado/index.html'
+  location.href = '../home/index.html'
 }
 
 function goSettings() {

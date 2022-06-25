@@ -1,5 +1,5 @@
 function goHome() {
-  location.href = '../logado/index.html'
+  location.href = '../home/index.html'
 }
 
 function goFavs() {
