@@ -22,6 +22,10 @@ function goHome() {
   location.href = '../home/index.html'
 }
 
+function goFavs() {
+    location.href = '../favoritos/index.html  '
+}
+
 function onDrag({movementX}){
     let getStyle = window.getComputedStyle(card);
     let left = parseInt(getStyle.left);
