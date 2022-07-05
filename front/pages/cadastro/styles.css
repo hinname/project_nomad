@@ -1,142 +1,155 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --fonte-destaque: 'Inter', sans-serif;
+    --fonte-padrao: 'Poppins', sans-serif;
+}
 
 * {
     margin: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-main h1 {
-    color: white;
-    text-align: center;
-    margin-bottom: 0.7rem;
-}
-
-main h4 {
-    color: white;
-    text-align: center;
-    margin-bottom: 1rem;
+    padding: 0;
 }
 
 body {
-    background-image: url(nomad.png);
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    font-weight: 500;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    font-family: var(--fonte-padrao);
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;  
+    align-items: center; 
+    background: url(./img/Nomads.svg);
+}
+
+.container * {
+    z-index: 15;
+}
+
+header {
+    font-family: var(--fonte-destaque);
+    color: white;
+}
+
+header h1 {
+    padding-top: 10px;
+    font-weight: bolder;
+    text-shadow: 2px 0px 0.3px rgba(0, 0, 0, 0.199);
+    font-size: 36px;
+}
+
+header p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.shadow {
+    width: 100%;
+    box-shadow: 0px -300px 16px 600px rgba(0, 0, 0, 0.397);
+    z-index: 10;
+    position: absolute;
+    top: 100%;
 }
 
 main {
-    width: 50vw;
+    width: 88%;
+    background-color: #ffffffb6;
+    border-radius: 6px;
+    height: 550px;
     display: flex;
     flex-direction: column;
+}
+
+.inputs > * {
+    text-align: left;
+    padding-left: 18px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.inputs h4 {
+    padding-bottom:5px;
+    font-family: var(--fonte-padrao);
+    font-weight: 400;
+}
+
+.usuario {
+    padding-top: 30px;
+}
+
+.email {
+    padding-top: 10px;  
+}
+
+.senha {
+    padding-top: 10px;
+}
+
+.confirmar_senha {
+    padding-top: 10px;
+}
+
+.inputs input { 
+    padding: 10px;
+    width: 85%;
+    background-color: #c4c4c4ce;
+    border: none;
+    border-radius: 5px;
+}
+
+.inputs a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.midia_social {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 34px;
 }
 
-main .destaque {
-    background: white;
-    margin-bottom: 1rem;
-    align-content: center;
-    border: black;
+.midia_social img {
+    height: 48px;
 }
 
-main .midia_social {
-    display: flex;
-    align-content: center;
+.botao {
+    padding-top: 10px;
 }
 
-main .midia_social a {
-    text-decoration: none;
-}
-
-main .midia_social img {
-    width: 36px;
-    margin-left: 3rem;
-}
-
-main .midia_social a:first-child img {
-    margin-left: 4rem;
-}
-
-main .alternativa {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-main .alternativa span {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: black;
-    position: center;
-}
-
-main form {
-    background: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-}
-
-main form label {
-    display: flex;
-    flex-direction: column;
-}
-
-main form label span {
-    font-size: 1.1rem;
-    margin-top: 2rem;
-}
-
-main form input {
-    background: wheat;
-    width: 300px;
-    height: 50px;
-    padding: 0 0.5rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    outline: none;
-    font-size: 1rem;
-    border: 1px solid black;
-    border-radius: 8px;
-}
-
-main form input[type="submit"] {
-    cursor: pointer;
-    width: 50%;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 32px;
-    background: deepskyblue;
+.botao button {
+    padding: 20px 80px 20px;
+    border-radius: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
     color: white;
-    font-size: 1.1rem;
-    transition: all 0.3s ease-in-out;
+    background-color: #2795DE;
+    border: 0;
+    box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.226);
 }
 
-main form input[type="submit"]:hover {
-    background: rgb(0,147,255);
+.login {
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
-main {
-    width: 100vw;
-}
-
-@media only screen and (max-width: 450px) {
-    main h1 {
-        font-size: 1.5rem;
-    }
-
-    main .alternativa span {
-        font-size: 1rem;
-    }
-
-    main form label span, main form input[type="submit"] {
-        font-size: 1rem;
-    }
+.login a {
+    font-size: 21px;
+    font-weight: 800;
+    font-family: var(--fonte-destaque);
+    text-decoration: none;
+    color: #e2f3ffda;
 }
