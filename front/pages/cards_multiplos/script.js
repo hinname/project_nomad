@@ -1,6 +1,7 @@
 
     let cards
     let card
+    let image
     let images = document.getElementsByClassName('image')
     let imgNum
     let i = 0
@@ -26,26 +27,33 @@ function goFavs() {
     location.href = '../favoritos/index.html  '
 }
 
-function onDrag({movementX}){
-    let getStyle = window.getComputedStyle(card);
-    let left = parseInt(getStyle.left);
+// function onDrag({movementX}){
+//     let getStyle = window.getComputedStyle(card);
+//     let left = parseInt(getStyle.left);
     
-    card.style.left = `${left + movementX}px`
-}
+//     card.style.left = `${left + movementX}px`
+// }
 
 function onDragMobile(touch){
     card = image.parentElement
     checkNum(this)
-    let touchLocation = touch.targetTouches[0]
+    let touchLocation = touch.targetTouches[0];
     let getCardStyle = window.getComputedStyle(card);
     let left = parseInt(getCardStyle.left);
     let cardWidth = parseInt(getCardStyle.width);
     let bodyWidth = parseInt(window.getComputedStyle(document.body).width);
+
+    card.style.zIndex = 100
+    
     if (imgNum%2 == 0){
         card.style.left = `${touchLocation.pageX - bodyWidth/1.4}px`
-card.style. left = `${touchLocation.pageX - cardWidth/2}px`    }
-    if (parseInt(card.style.left) >= 50){
+    }else{ 
+        card.style.left = `${touchLocation.pageX - cardWidth/2}px`    
+    }
+    if (parseInt(card.style.left) >= 50 || parseInt(card.style.left) <= -50){
         card.style.opacity = '0.78'
+    } else {
+        card.style.opacity = '1'
     }
 }
 
@@ -61,10 +69,11 @@ function removeCard(){
     }
 }
 //Holding mouse left button to swipe
-image.addEventListener("mousedown", ()=>{
-    image.classList.add("active");
-    image.addEventListener("mousemove", onDrag)
-})
+// image.addEventListener("mousedown", ()=>{
+//     image.classList.add("active");
+//     image.addEventListener("mousemove", onDrag)
+// })
+
 //Pressing the touchscreen to swipe
 function touchPress(cardImg){
     image = cardImg
@@ -73,10 +82,11 @@ function touchPress(cardImg){
     
 }
 //Releasing the mouse left button
-document.addEventListener("mouseup", ()=>{
-    image.classList.remove("active")
-    image.removeEventListener("mousemove", onDrag)
-})
+// document.addEventListener("mouseup", ()=>{
+//     image.classList.remove("active")
+//     image.removeEventListener("mousemove", onDrag)
+// })
+
 //Releasing the touchscreen
 function touchRelease(){
     let getStyle = window.getComputedStyle(card);
