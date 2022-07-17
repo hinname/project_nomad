@@ -11,17 +11,17 @@
       <div class="container">
             <header>
                   <div class="shortcuts">
-                        <i class="fa-solid fa-house" id="homeIcon" onclick="goHome()"></i>
+                        <i class="fa-solid fa-house" id="homeIcon" ontouchstart="goHome()" onclick="goHome()"></i>
                         <div class="center">
                               <div class="option selected">
                                     <i class="fa-solid fa-plane-departure"></i>
                               </div>
-                              <div class="option" onclick="goMultipleCards()">
+                              <div class="option" ontouchstart="goMultipleCards()" onclick="goMultipleCards()">
                                     <i class="fa-solid fa-map-location-dot"></i>
                               </div>
                         </div>
             
-                        <i class="fa-solid fa-star" id="favsIcon" onclick="goFavs()"></i>
+                        <i class="fa-solid fa-star" id="favsIcon" ontouchstart="goFavs()" onclick="goFavs()"></i>
                   </div>
             </header>
             
@@ -47,10 +47,10 @@
                               <i class="fa-solid fa-rotate-left"></i>
                         </div>
                         <div class="xmark">
-                              <i class="fa-solid fa-xmark" onclick="denyCard()"></i>
+                              <i class="fa-solid fa-xmark" ontouchstart="denyCard()" onclick="denyCard()"></i>
                         </div>
                         <div class="star">
-                              <i class="fa-solid fa-star" onclick="favoriteCard()"></i>
+                              <i class="fa-solid fa-star" ontouchstart="favoriteCard()" onclick="favoriteCard()"></i>
                         </div>
                         <div class="money">
                               <i class="fa-solid fa-money-bill-wave"></i>

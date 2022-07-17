@@ -11,8 +11,8 @@
   <body>
     <header>
       <div class="shortcuts">
-        <i class="fa-solid fa-house" id="homeIcon" onclick="goHome()"></i>
-        <i class="fa-solid fa-star" id="favsIcon" onclick="goFavs()"></i>
+        <i class="fa-solid fa-house" id="homeIcon" ontouchstart="goHome()" onclick="goHome()"></i>
+        <i class="fa-solid fa-star" id="favsIcon" ontouchstart="goFavs()" onclick="goFavs()"></i>
       </div>
     </header>
 
@@ -63,7 +63,7 @@
         <h2>Notificações</h2>
       </div>
 
-      <div class="logout" onclick="dropLocationOptions()">
+      <div class="logout" ontouchstart="dropLocationOptions()" onclick="dropLocationOptions()">
         <i class="fa-solid fa-arrow-right-from-bracket"></i>
         <h2>Sair</h2>
       </div>
